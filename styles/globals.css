@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: white) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+table.table-auto {
+  font-family: "Times New Roman", Times, serif;
+  border: 10px solid #ffffff;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+table.table-auto td,
+table.table-auto th {
+  border: 1px solid #ffffff;
+  padding: 3px 2px;
+}
+table.table-auto tbody td {
+  font-size: 13px;
+}
+table.table-auto tr:nth-child(even) {
+  background: #d0e4f5;
+}
+table.table-auto thead {
+  background: #0b6fa4;
+  border-bottom: 5px solid #ffffff;
+}
+table.table-auto thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border-left: 2px solid #ffffff;
+}
+table.table-auto thead th:first-child {
+  border-left: none;
+}
+
+table.table-auto tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #d0e4f5;
+  border-top: 3px solid #444444;
+}
+table.table-auto tfoot td {
+  font-size: 14px;
+}
