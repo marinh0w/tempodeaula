@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DataTable from 'react-data-table-component';
+import data from 'quimica.json'
 
 const CustomTable = () => {
   const [countries, setCountries] = useState([]);
 
   const getCountries = async () => {
     try {
-      const response = await axios.get('https://restcountries.com/v2/all');
+      const response = await axios.get('../quimica.json');
       setCountries(response.data);
       console.log(countries);
     } catch (error) {
@@ -16,16 +17,16 @@ const CustomTable = () => {
   };
   const columns = [
     {
-      name: 'Horário',
-      selector: (row) => row.name,
+      name: 'HORAINICIAL',
+      selector: (row) => row.HORAINICIAL,
     },
     {
-      name: 'Segunda',
-      selector: (row) => row.name,
+      name: 'HORAFINAL',
+      selector: (row) => row.HORAFINAL,
     },
     {
-      name: 'Terça',
-      selector: (row) => row.capital,
+      name: 'DIASEMANA',
+      selector: (row) => row.DIASEMANA,
       conditionalCellStyles: [
         /* usar para os horários disponíveis */
         {
@@ -36,22 +37,10 @@ const CustomTable = () => {
         },
       ],
     },
-    {
-      name: 'Quarta',
-      selector: (row) => row.name,
-    },
-    {
-      name: 'Quinta',
-      selector: (row) => row.name,
-    },
-    {
-      name: 'Sexta',
-      selector: (row) => row.name,
-    },
-    {
+    /*{
       name: 'Flag',
       selector: (row) => <img src={row.flag} width={50} height={50} />,
-    },
+    },*/
   ];
 
   useEffect(() => {
