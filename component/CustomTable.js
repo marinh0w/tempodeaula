@@ -31,7 +31,7 @@ const CustomTable = () => {
         {
           when: (row) => row.capital === 'Kabul',
           style: {
-            backgroundColor: 'blue',
+            backgroundColor: 'green',
           },
         },
       ],
